@@ -1,0 +1,11 @@
+{
+  "name": "ql-mysql-client",
+  "version": "0.0.0",
+  "author": "Jack Lu <jacklu@jacklu.me>",
+  "license": "ISC",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "ql": "panlina/ql",
+    "ql-driver-mysql": "panlina/ql-driver-mysql"
+  }
+}

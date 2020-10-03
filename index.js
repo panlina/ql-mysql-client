@@ -2,6 +2,7 @@ var connection = new URL(process.argv[2]);	// mysql://user:password@hostname:por
 var schema = process.argv[3];
 var data = {
 	host: connection.hostname,
+	port: connection.port,
 	user: connection.username,
 	password: connection.password,
 	database: connection.pathname.substr(1)

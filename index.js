@@ -33,10 +33,15 @@ driver.connect(e => {
 						var Table = require('cli-table3');
 						var table = new Table({ head: Object.keys(output[0]) });
 						for (var row of output)
-							table.push(Object.values(row));
+							table.push(Object.values(row).map(render));
 						return table.toString();
 					} else
 						return "(empty)";
+					function render(value) {
+						if (value instanceof Date) return value.toString();
+						if (value instanceof Buffer) return value.inspect();
+						return value;
+					}
 				}
 			}
 		}).on('exit', () => {

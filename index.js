@@ -30,7 +30,7 @@ driver.connect(e => {
 					return output.message;
 				else {
 					if (output.length) {
-						var Table = require('cli-table');
+						var Table = require('cli-table3');
 						var table = new Table({ head: Object.keys(output[0]) });
 						for (var row of output)
 							table.push(Object.values(row));
